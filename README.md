@@ -11,7 +11,7 @@ This simple GitHub-hosted webpage will try to get an IP v4 address of the user w
 2. The user will tap the button, and Telegram will warn user about IP access.
  <img src="https://github.com/Kylmakalle/telegram-miniapp-ip/assets/24507532/23b729bb-d222-40f5-bfb7-83d1bca5de13" width="297.33">
 
-3. After User confirmation, webapp will quickly "blink" on user screen without showing any content. Your bot will receive a [Message](https://core.telegram.org/bots/api#message) with `web_app_data.data` json-encoded string in format `{"web_app_id":"<IP>"}`.
+3. After User confirmation, webapp will quickly "blink" on user screen without showing any content. Your bot will receive a [Message](https://core.telegram.org/bots/api#message) with `web_app_data.data` json-encoded string in format `{"web_app_ip":"<IP>"}`.
     - Example data: `{"web_app_data":{"data":"{\"web_app_ip\":\"185.134.24.94\"}\", "button_text": "Share IP"}`
 
 https://github.com/Kylmakalle/telegram-miniapp-ip/assets/24507532/34937cba-70b4-4218-b2ee-5b498855183e
